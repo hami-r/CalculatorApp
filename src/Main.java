@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        while (true) {
+        boolean exit = true;
+        while (exit) {
             System.out.println("<-----------MENU-------------->\n" +
                     "Select options:\n" +
                     "1. Addition\n" +
@@ -22,6 +23,14 @@ public class Main {
                 case 1:
                     System.out.println("Sum = " + (num1 + num2));
                     break;
+                case 2:
+                    System.out.println("Difference = " + (num1 - num2));
+                    break;
+                default:
+                    System.out.println("Exiting");
+                    exit = false;
+                    break;
+
             }
         }
     }
