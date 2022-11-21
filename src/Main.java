@@ -26,6 +26,9 @@ public class Main {
                 case 2:
                     System.out.println("Difference = " + (num1 - num2));
                     break;
+                case 3:
+                    System.out.println("Product = " + (num1 * num2));
+                    break;
                 default:
                     System.out.println("Exiting");
                     exit = false;
