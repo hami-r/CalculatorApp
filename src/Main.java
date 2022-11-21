@@ -17,9 +17,9 @@ public class Main {
                 break;
             }
             System.out.print("Enter the first number: ");
-            double num1 = scanner.nextInt();
+            int num1 = scanner.nextInt();
             System.out.print("Enter the second number: ");
-            double num2 = scanner.nextInt();
+            int num2 = scanner.nextInt();
 
             switch(choice) {
                 case 1:
@@ -32,7 +32,12 @@ public class Main {
                     System.out.println("Product = " + (num1 * num2));
                     break;
                 case 4:
-                    System.out.println("Result = " + (num1 / num2));
+
+                    try {
+                        System.out.println("Result = " + (num1 / num2));
+                    } catch (Exception e) {
+                        System.out.println("Can't divide by zero");
+                    }
                     break;
                 default:
                     System.out.println("Invalid choice\n" +
