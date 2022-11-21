@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        boolean exit = true;
-        while (exit) {
+        while (true) {
             System.out.println("<-----------MENU-------------->\n" +
                     "Select options:\n" +
                     "1. Addition\n" +
@@ -14,6 +13,9 @@ public class Main {
             );
             Scanner scanner = new Scanner(System.in);
             int choice = scanner.nextInt();
+            if(choice == 0) {
+                break;
+            }
             System.out.print("Enter the first number: ");
             double num1 = scanner.nextInt();
             System.out.print("Enter the second number: ");
@@ -29,9 +31,12 @@ public class Main {
                 case 3:
                     System.out.println("Product = " + (num1 * num2));
                     break;
+                case 4:
+                    System.out.println("Result = " + (num1 / num2));
+                    break;
                 default:
-                    System.out.println("Exiting");
-                    exit = false;
+                    System.out.println("Invalid choice\n" +
+                            "Try Again");
                     break;
 
             }
